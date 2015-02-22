@@ -1,0 +1,49 @@
+* Spartan-3 Plasma Kit
+
+Spartan-3 Plasma Kit is an application of the Plasma CPU core (MIPS I
+compatible) on the Spartan-3 Starter Kit from XILINX.  Not only being a working
+CPU core, it also includes I/O interfaces for the peripheral devices on the
+board like SRAM, RS-232C and VGA, aiming to be a practical platform for the
+hobby programming.
+
+For details, visit the web site below:
+
+	https://ssl.keshi.org/projects/logic/trac.fcgi/wiki/PlasmaKit
+
+mlite directory contains the cpu core files imported from the Plasma project.
+All other descriptions like the top level, peripheral I/O, test benches for the
+simulator are in the top directory.
+
+gdb-stub directory contains the firmware.  Most codes are stolen from the MIPS
+Linux kernel.  It has many lacking features for real debugging, as the CPU is
+quite immature yet.
+
+loadelf directory contains a sample application.  You could see a GIF image
+displayed from the VGA port by running "make b2con" there.
+
+* Memory map
+
+0x00000000: Start of the SRAM memory and the entry point.
+0x000c0000: Framebuffer 640x480x3bpp in the packed pixel format.
+            Each byte contains 2 pixels.
+0x00100000: End of the SRAM memory.
+0x40000000: Serial I/O data register (read/write)
+0x40000004: Serial I/O status register (read)
+            bit 0: TXEMPTY (transmit buffer is empty)
+	    bit 1: RXREADY (one character is received)
+	    bit 2: RXFERROR (last received character contains a framing error)
+	    bit 3: RXOERROR (overflow error occured)
+
+* TODO
+
+  Hardware
+    - Improve speed and size more by utilizing dedicated functions in the
+      Spartan-3 FPGA, like block RAMs and multipliers.
+    - Implement exception and interrupt features which conforms to common MIPS
+      specifications.
+  Software:
+    - Improve GDB stub.
+    - Port a kernel like eCos, uCLinux.
+
+--
+YAEGASHI Takeshi <t@keshi.org> <takeshi@yaegashi.jp> <yaegashi@debian.org>

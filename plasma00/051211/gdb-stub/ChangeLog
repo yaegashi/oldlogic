@@ -1,0 +1,19 @@
+Fri Dec 02 03:26:38 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* regdef.h: New file: Assembly macros.
+	* asm.h: New file: Assembly macros.
+	* sgidefs.h: New file: Assembly macros.
+	* gdb-low.S: New file: Exception handler (trap_low).
+	* gdb-stub.lds: Reserved memory region 0 to 0x10000 for gdb-stub.
+	* gdb-stub.c (computeSignal): Always return SIGTRAP.
+	(breakpoint): Call _exception().
+	* gdb-stub.h: Added _exception() prototype.
+	* entry.S: Added exception vector code (simply jumps trap_low).
+	* Makefile (CPPFLAGS): Added MIPS ABI definitions.  (Should I use the
+	mipsel-linux toolchain instead?)
+	(ASFLAGS): Added -D__ASSEMBLY__.
+	(gdb-stub.elf): Added dependencies.
+
+Thu Dec 01 06:07:33 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Initial import.  Stolen from MIPS Linux kernel.

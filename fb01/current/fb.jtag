@@ -1,0 +1,5 @@
+# $Id: fb.jtag 24 2005-11-27 12:10:23Z yaegashi $
+cable ppdev /dev/parport0 DLC5
+detect
+part 0
+svf work/export/fb.svf

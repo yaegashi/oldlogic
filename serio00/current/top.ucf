@@ -1,0 +1,14 @@
+# $Id: top.ucf 16 2005-11-24 21:16:19Z yaegashi $
+
+NET "CLK" LOC = "T9"; 
+NET "RXD" LOC = "T13";
+NET "TXD" LOC = "R13";
+
+net "LED<0>" LOC = "K12";
+net "LED<1>" LOC = "P14";
+net "LED<2>" LOC = "L12";
+net "LED<3>" LOC = "N14";
+net "LED<4>" LOC = "P13";
+net "LED<5>" LOC = "N12";
+net "LED<6>" LOC = "P12";
+net "LED<7>" LOC = "P11";

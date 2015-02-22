@@ -1,0 +1,13 @@
+Mon Dec 12 02:47:15 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Makefile: Added rules for gdb.
+	* b2con.gif: New file: b2con banner.
+	* b2con.gdb: New file: gdb script to display b2con.gif.
+
+Fri Dec 02 06:40:12 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Working version.
+
+Fri Dec 02 05:34:23 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Initial import.

@@ -1,0 +1,8 @@
+Thu Nov 17 03:24:32 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Correct the sensitivity list.
+	* Introduce new generic variable: WIDTH.
+
+Thu Nov 17 02:25:20 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* First working version.

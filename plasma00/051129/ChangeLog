@@ -1,0 +1,166 @@
+Wed Nov 30 06:29:05 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* serio.vhd: Implemented an interface as a memory-mapped device.
+	* top.vhd: Integrated new SERIO in the system bus.
+
+Wed Nov 30 04:28:30 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Makefile: Copy .ucf and .opt to $(WORKDIR) on synth.
+	* d7seg.vhd: New file: Dynamic 7-segment display driver.
+	* top.vhd: Integrated D7SEG.  Display mlite's address output and
+	system state.
+	* top.prj: Added d7seg.vhd.
+	* top.ucf: Added constraints for D7SEG pins.
+	* top.dat: Revised.  Draw a pattern using add/sub/mul.
+
+Wed Nov 30 01:37:45 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Renamed the name of type and signal of the system state
+	(SYSTEM_STATE, SSTATE).  Use more meaningful notation for states.
+
+Tue Nov 29 23:21:01 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* pc_next.vhd: Use an optimized component for the adder.
+	* alu.vhd: Use an optimized component for the addsub.
+
+Tue Nov 29 22:20:54 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* serio.vhd: New file: Serial I/O.
+	* top.prj: Added serio.vhd.
+	* top.ucf: Added constraints for SERIO pins.
+	* top.vhd: Integrated SERIO.  Not yet connected to the system bus.
+	* Makefile: Changed WORKDIR to xflow.
+	* xst_mixed.opt: New file: XST option file for XFLOW.
+	* top.cmd: Fixed .mcs path.
+
+Tue Nov 29 13:09:27 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* sim.do: Fixed the file name, fsim.vhd -> sim.vhd.
+	* sim.vhd: Fixed the clock cycle.
+	* sram.vhd: Supplied a little more complex test bench.
+
+Tue Nov 29 12:56:26 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* fb.vhd: Added the new generic parameter DELAY, which specifies a
+	number of clocks before starting to read from the FIFO.
+	* top.vhd: Specify the generic DELAY on FB0.
+
+Tue Nov 29 12:12:46 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Moved framebuffer address to 0xc0000.  Removed bus conflict
+	condition.
+	* top.dat: Revised.
+
+Tue Nov 29 10:57:50 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* mult.vhd: Added missing signals in the sensitivity list.
+	* alu.vhd: Disabled synopsys directives.
+	* Makefile: Copy a .ucf file to the work dir. on fsim.
+
+Tue Nov 29 09:13:56 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* tsim.do: Added remarks for functional simulation.
+	
+Tue Nov 29 08:38:08 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Makefile: Added the new target fsim for functional simulation.
+	* top.prj: Removed ram.vhd.
+
+Tue Nov 29 08:33:14 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* fsim.do, fsim.vhd: Removed.
+	* sim.do, sim.vhd: Renamed from fsim.do, fsim.vhd.
+
+Tue Nov 29 08:16:28 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* ram.vhd: Removed.  Unused behavior model.
+	* fsim.do: Ditto.
+
+Tue Nov 29 08:09:27 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Changed the generic name, SIMULATION to SKIP_CONFINIT.
+	* fsim.vhd: Added the PROM behavior.
+	
+Tue Nov 29 07:40:00 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Clock down.  MCLK = VCLK = 25MHz.
+	* top.ucf: Eliminated constraints for MCLK.
+	* confinit.vhd: Latch the output.
+
+Tue Nov 29 07:22:50 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Added the new generic SIMULATION.  Integrated new
+	implementation of ASRAMC.
+	* asmrac.vhd: Rewrote.  Added the new port RAM_OE.
+	* fsim.vhd: Specify SIMULATION is true.
+	* sram.vhd: New test vector (testing byte accesses).
+
+Tue Nov 29 06:16:09 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Makefile: Added the new target tsim to generate a timing simulation
+	netlist (time_sim.vhd).
+	* top.cmd: Correct the path of .mcs.
+	* top.dat: Test MIPS instuctions for plasma.
+
+Tue Nov 29 05:42:20 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* tbench.do: Removed.
+	* tbench.vhd: Removed.
+	* tsim.do: New file: Timing simulation script.
+	* tsim.vhd: New file: Timing simulation test bench.
+	* fsim.do: New file: Renamed from tbench.do.
+	* fsim.vhd: New file: Renamed from tbench.vhd.
+
+Tue Nov 29 01:20:21 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* tbench.do: New file: ModelSim script.
+	* tbench.vhd: New file: Test bench.
+	* sram.vhd: New file: SRAM behavior model.
+	* ram16xyd.vhd: Fixed the instance label (RAM16X1D).
+	* top.vhd: Fixed the vector size mismatch.
+	* mem_ctrl.vhd: Eliminated the high-z output (mem_data_w).
+
+Tue Nov 29 01:20:21 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* fb.vhd: Insert 2 clocks more before output for 25MHz operating.
+
+Tue Nov 29 00:55:00 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Added CS4 state.  Not yet working on memory writes.
+
+Mon Nov 28 13:28:05 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* fb.vhd: Changed the packed pixel organization, 4 bits/pixel.
+	* top.dat: Revised.
+	* top.vhd: Fixed generic parameters.
+	* Makefile: Raise the effort level of implementation.
+
+Mon Nov 28 12:09:40 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* asramc.vhd: Fixed a bug of RAM_RW.
+	* confinit.vhd: Changed state names.
+	* fb.vhd: Changed port name: STROBE -> ACTIVE.
+	* top.vhd: Changed FB0's signal name.
+
+Mon Nov 28 10:59:45 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* top.vhd: Integrated FB.
+	* top.prj: Ditto.
+	* top.ucf: Add FB pins.
+	* top.cmd: New file: iMPACT script.
+	* top.dat: New file: Initial SRAM content.
+	* fb.vhd: New file: Entity FB.
+	* ram16xyd.vhd: New file: Entity RAM16XYD.
+	* crtc.vhd: New file: Entity CRTC.
+	* Makefile: Clean iMPACT log files.
+
+Mon Nov 28 09:39:06 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* confinit.vhd: New file.
+	* top.vhd: Integrated CONFINIT.
+	* top.prj: Ditto.
+	* top.ucf: Added CONFINIT pins.
+
+Mon Nov 28 07:08:34 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Initial import.

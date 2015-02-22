@@ -1,0 +1,8 @@
+# $Id: crtc.ucf 3 2005-11-16 17:29:26Z yaegashi $
+
+NET "CLK" LOC = "T9"; 
+NET "VR" LOC = "R12"; 
+NET "VG" LOC = "T12"; 
+NET "VB" LOC = "R11"; 
+NET "VH" LOC = "R9"; 
+NET "VV" LOC = "T10"; 

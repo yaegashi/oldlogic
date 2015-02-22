@@ -1,0 +1,73 @@
+# $Id: fb.ucf 10 2005-11-21 12:31:56Z yaegashi $
+
+NET "CLK" LOC = "T9"; 
+NET "VR" LOC = "R12"; 
+NET "VG" LOC = "T12"; 
+NET "VB" LOC = "R11"; 
+NET "HSYNC" LOC = "R9"; 
+NET "VSYNC" LOC = "T10"; 
+
+NET "RAM_A<0>" LOC = "L5";
+NET "RAM_A<1>" LOC = "N3";
+NET "RAM_A<2>" LOC = "M4";
+NET "RAM_A<3>" LOC = "M3";
+NET "RAM_A<4>" LOC = "L4";
+NET "RAM_A<5>" LOC = "G4";
+NET "RAM_A<6>" LOC = "F3";
+NET "RAM_A<7>" LOC = "F4";
+NET "RAM_A<8>" LOC = "E3";
+NET "RAM_A<9>" LOC = "E4";
+NET "RAM_A<10>" LOC = "G5";
+NET "RAM_A<11>" LOC = "H3";
+NET "RAM_A<12>" LOC = "H4";
+NET "RAM_A<13>" LOC = "J4";
+NET "RAM_A<14>" LOC = "J3";
+NET "RAM_A<15>" LOC = "K3";
+NET "RAM_A<16>" LOC = "K5";
+NET "RAM_A<17>" LOC = "L3";
+
+net "RAM_D<0>" LOC = "N7";
+net "RAM_D<1>" LOC = "T8";
+net "RAM_D<2>" LOC = "R6";
+net "RAM_D<3>" LOC = "T5";
+net "RAM_D<4>" LOC = "R5";
+net "RAM_D<5>" LOC = "C2";
+net "RAM_D<6>" LOC = "C1";
+net "RAM_D<7>" LOC = "B1";
+net "RAM_D<8>" LOC = "D3";
+net "RAM_D<9>" LOC = "P8";
+net "RAM_D<10>" LOC = "F2";
+net "RAM_D<11>" LOC = "H1";
+net "RAM_D<12>" LOC = "J2";
+net "RAM_D<13>" LOC = "L2";
+net "RAM_D<14>" LOC = "P1";
+net "RAM_D<15>" LOC = "R1";
+net "RAM_D<16>" LOC = "P2";
+net "RAM_D<17>" LOC = "N2";
+net "RAM_D<18>" LOC = "M2";
+net "RAM_D<19>" LOC = "K1";
+net "RAM_D<20>" LOC = "J1";
+net "RAM_D<21>" LOC = "G2";
+net "RAM_D<22>" LOC = "E1";
+net "RAM_D<23>" LOC = "D1";
+net "RAM_D<24>" LOC = "D2";
+net "RAM_D<25>" LOC = "E2";
+net "RAM_D<26>" LOC = "G1";
+net "RAM_D<27>" LOC = "F5";
+net "RAM_D<28>" LOC = "C3";
+net "RAM_D<29>" LOC = "K2";
+net "RAM_D<30>" LOC = "M1";
+net "RAM_D<31>" LOC = "N1";
+
+net "RAM_CE1" LOC = "P7";
+net "RAM_LB1" LOC = "P6";
+net "RAM_UB1" LOC = "T4";
+net "RAM_CE2" LOC = "N5";
+net "RAM_LB2" LOC = "P5";
+net "RAM_UB2" LOC = "R4";
+net "RAM_OE" LOC = "K4";
+net "RAM_WE" LOC = "G3";
+
+net "CDIN" LOC = "M11";
+net "CINIT" LOC = "N9";
+net "CCLK" LOC = "A14";

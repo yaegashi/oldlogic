@@ -1,0 +1,6 @@
+vhdl work "fb.vhd"
+vhdl work "clkgen.vhd"
+vhdl work "crtc.vhd"
+vhdl work "asramc.vhd"
+vhdl work "confinit.vhd"
+vhdl work "ram16xyd.vhd"

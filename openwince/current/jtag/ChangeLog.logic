@@ -1,0 +1,19 @@
+Sun Nov 27 07:49:08 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* data/xilinx/PARTS: Added XILINX XC3S200-FT256 and XCF01S-VQ20.
+	* data/xilinx/xc2c256-tq144/STEPPINGS: New file.
+	* data/xilinx/xc2c256-tq144/xc2c256-tq144: New file.
+	* data/xilinx/xcf02s-vo20/STEPPINGS: New file.
+	* data/xilinx/xcf02s-vo20/xcf02s-vo20: New file.
+	* data/Makefile.am (nobase_dist_pkgdata_DATA): Added new files.
+
+Sun Nov 27 07:26:56 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Applied patches from the upstream patch repository.
+	  http://sourceforge.net/tracker/index.php?func=detail&aid=1074347&group_id=52603&atid=469852
+	  http://sourceforge.net/tracker/index.php?func=detail&aid=1194137&group_id=52603&atid=469852
+	  which extend the svf command.
+
+Sun Nov 27 07:22:47 2005  YAEGASHI Takeshi <t@keshi.org>
+
+	* Initial import.
